@@ -1,7 +1,10 @@
 class Solution {
 public:
     int minPartitions(string n) {
-        sort(n.begin(),n.end());
-        return n[n.length()-1]-'0';
+        int maxi=0;
+        for(char c:n){
+            maxi=max(maxi,c-'0');
+        }
+        return maxi;
     }
 };
