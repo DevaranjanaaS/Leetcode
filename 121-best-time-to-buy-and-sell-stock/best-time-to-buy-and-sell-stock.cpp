@@ -7,9 +7,7 @@ public:
             if(prices[i]<mini){
                 mini=prices[i];
             }
-            else{
-                profit=max(profit,prices[i]-mini);
-            }
+            profit=max(profit,prices[i]-mini);
         }
         return profit;
     }
