@@ -4,11 +4,11 @@ public:
         string ans = "";
         map<char, int, greater<char>> cnt;
         int j;
-
         for (char c : s) {
             cnt[c]++;
         }
-        for (auto i = cnt.begin(); i != cnt.end();) {
+        auto i=cnt.begin();
+        while(i!=cnt.end()){
             if (i->second <= repeatLimit) {
                 ans.append(i->second, i->first);
                 i = cnt.erase(i);
